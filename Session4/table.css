@@ -1,0 +1,67 @@
+*{
+    margin: 0; padding: 0;
+}
+
+body{
+    background-color: blueviolet;
+}
+
+
+table{
+    border: 1px solid blue;
+    border-collapse: collapse;
+    border-radius: 15px;
+    background-color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+th, td {
+    padding: 23px ;
+}
+
+td{
+    text-align: center;
+}
+
+tr{
+    border-top: 1px solid blue;
+    padding: 200px;
+}
+
+
+.topside{
+    background-color: rgb(201, 201, 201);
+}
+
+.star-rating{
+    display: flex;
+    justify-content: center;
+}
+
+.star-rating1:hover{
+    transform: scale(1.5);
+    transition: 0.2s ease;
+    color: gold;
+}
+.star-rating2:hover{
+    transform: scale(1.5);
+    transition: 0.2s ease;
+    color: gold;
+}
+.star-rating3:hover{
+    transform: scale(1.5);
+    transition: 0.2s ease;
+    color: gold;
+}
+.star-rating4:hover{
+    transform: scale(1.5);
+    transition: 0.2s ease;
+    color: gold;
+}
+.star-rating5:hover{
+    transform: scale(1.5);
+    transition: 0.2s ease;
+    color: gold;
+}
