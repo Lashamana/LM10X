@@ -105,8 +105,5 @@ input[type=radio]{
     gap: 10px;
 }
 .select-index{
-    flex-basis: 40%;
+    flex-basis: 30%;
 }
-select{
-    border: 2px inset transparent;
-}`
