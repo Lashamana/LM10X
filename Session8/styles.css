@@ -22,6 +22,9 @@
     font-display: swap;
 }
 
+:root {
+    --shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
 
 *{
     margin: 0;
@@ -44,6 +47,8 @@ button {
     border: none;
     background: none;
 }
+
+
 
 header {
     width: 1440px;
@@ -198,10 +203,23 @@ header {
         }
     }
     .chairSection {
+        position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
+        /* justify-content: center; */
         gap: 20px;
+        & .arrowLeft {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -45px;
+        }
+        & .arrowRight {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -45px;
+        }
         & .chairs {
             display: flex;
             flex-direction: column;
@@ -227,8 +245,8 @@ header {
                 color: #8D8D8D;
             }
             & h3 {
-                font-family: 'Gilroy-Medium';
                 font-size: 22px;
+                font-weight: 600;
                 color: #0D1B39;
             }
             & .addPaymant {
@@ -317,7 +335,7 @@ header {
     position: relative;
     & img {
         border-radius: 0px 35px 35px 0px;
-        box-shadow: 3px 3px 3px 3px rgb(128, 128, 128);
+        box-shadow: var(--shadow);
     }
 }
 
@@ -367,24 +385,45 @@ header {
         margin-top: 120px;
     }
     & .matArt  {
+        position: relative;
         display: grid;
         grid-template-rows: auto auto;
         gap: 42px;
+        & img {
+            border-radius: 20px;
+        }
         & .ft1 {
             grid-column: 1;
             grid-row: 1;
+            box-shadow: var(--shadow);
         }
         & .ft2 {
             grid-column: 1;
             grid-row: 2;
+            box-shadow: var(--shadow);
         }
         & .ft3 {
             grid-column: 2;
             grid-row: span 2;
             align-self: end;
+            box-shadow: var(--shadow);
         }
+
     }
 }
+
+.matArt::before {
+    left: 375px;
+    top: 75px;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background-color: #F7F7F7;
+    width: 335px;
+    height: 300px;
+    border-radius: 35px 0px 0px 0px;
+}
+
 
 /* <!-- ------------------------------------------------------------- --> */
 
@@ -399,15 +438,28 @@ header {
 }
 
 .testimonialsCards {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 35px;
+    & .arrowLeft {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 80px;
+    }
+    & .arrowRight {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 80px;
+    }
     & .testiCard {
         position: relative;
         width: 372px;
         height: 470px;
         border-radius: 25px;
-        box-shadow: 3px 3px 3px 3px rgb(128, 128, 128);
+        box-shadow: var(--shadow);
         overflow: hidden;
         & .card {
             width: 100%;
@@ -466,35 +518,61 @@ header {
 footer {
     width: 1440px;
     height: 462px;
-    border: solid 1px red;
     display: grid;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-color: #F7F7F7;
 }
 
 .footerPanto {
     display: flex;
     justify-content: space-between;
-    border: solid 1px red;
     width: 1064px;
     height: 150px;
     & .ftPanto {
         display: grid;
         width: 290px;
         height: 150px;
+        & h3 {
+            font-family: Gilroy-Bold;
+            font-size: 28px;
+            line-height: 32px;
+            letter-spacing: 1%;
+        }
+        & p {
+            font-family: Gilroy-Medium;
+            font-size: 15px;
+            line-height: 24px;        
+        }
     }
     & ul {
         list-style: none;
+        display: grid;
+        width: 133px;
+        height: 146px;
+        & li {
+            font-family: Gilroy-Medium;
+            font-size: 15px;
+            line-height: 24px;
+        }
+        & .footerTitle {
+            font-family: Gilroy-Medium;
+            font-weight: 400;
+            font-size: 17px;        
+            color: #F6973F;
+        }
+        & .footerSocial {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
     }
-    & li {
-
-    }
+    
 }
 
 .copyright {
     display: flex;
     justify-content: space-between;
-    border: solid 1px red;
     width: 1064px;
     height: 25px;
     & .terms {
